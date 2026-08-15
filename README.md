@@ -19,7 +19,7 @@ This project applies advanced probability and statistics to consumer behavior.
 
 **2. Wallet Retention Half-Life (Kaplan-Meier Survival Analysis)**
 *   [INSERT YOUR MEDIAN SURVIVAL TIME HERE] seconds is the exact median survival time before a viewer initiates a second transaction.
-*   ![Kaplan-Meier Curve](graph2.png)
+*   ![Kaplan-Meier Curve](graph 2.png)
 
 ## Data Source
 The raw JSON extraction is hosted as a public CC0 dataset on Kaggle. 
