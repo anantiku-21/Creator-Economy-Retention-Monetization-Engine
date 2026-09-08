@@ -20,8 +20,8 @@ Built with Streamlit, Pandas, and Plotly, this project processes raw chat teleme
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/<anantiku-21>/creator-economy-retention.git
-    cd creator-economy-retention
+   git clone https://github.com/anantiku-21/creator-economy-retention.git
+cd creator-economy-retention
     ```
 
 2.  **Install dependencies:**
