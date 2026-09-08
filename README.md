@@ -1,25 +1,48 @@
-# Creator-Economy-Financial-Retention
-Predicting viewer financial retention and livestream microtransaction velocity using Kaplan Meier survival analysis
+# Creator Economy Retention & Monetization Engine
+An interactive, pure-Python dashboard designed to analyze microtransaction velocity, viewer retention, and lifetime value (LTV) within live-stream creator economies. 
+Built with Streamlit, Pandas, and Plotly, this project processes raw chat telemetry to extract actionable business insights—mirroring the analytical workflows used in live-service gaming economies.
 
-# Creator Economy Financial Retention Engine
+## Core Features
+*   **Zero-Database Architecture:** Reads directly from raw JSON exports and pre-computed CSV rollups, eliminating the need for local SQL databases or hardcoded credentials.
+*   **Financial Rollups:** Calculates key live-service metrics including Lifetime Value (LTV), Repeat-Purchase Rates, and Expansion Revenue from over 76,000 telemetry events.
+*   **Inter-arrival Time Analysis:** Utilizes Pandas to recreate SQL window functions, calculating the exact time delta between repeat purchases for individual users.
+*   **Survival Analysis:** Implements a streamlined Kaplan-Meier estimator (without relying on heavy external libraries like `lifelines`) to model user churn and project the probability of repeat microtransactions over time.
+*   **Interactive Visualizations:** Employs Plotly to generate clear, stakeholder-ready histograms, time-series line charts, and survival curves.
 
-## The Business Problem
-Predicting viewer financial retention and microtransaction velocity during high-volume live streams.
+## Tech Stack
+*   **Language:** Python
+*   **Data Manipulation:** Pandas, NumPy
+*   **Statistical Modeling:** SciPy (Exponential Distribution)
+*   **Visualization:** Plotly
+*   **Frontend:** Streamlit
 
-## Architecture & Tech Stack
-*   **Data Acquisition:** Python (`pytchat`) script bypassing API throttles to extract high-volume JSON data from a 6-hour live broadcast.
-*   **Database:** PostgreSQL ETL pipeline utilizing Window Functions (`LAG() OVER()`) to calculate exact inter-arrival times between financial transactions.
-*   **Statistical Modeling:** Python (`Pandas`, `SciPy`, `Lifelines`) to map probability distributions and calculate wallet-retention half-life.
+## Setup and Installation
 
-## Mathematical Insights
-This project applies advanced probability and statistics to consumer behavior.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/<your-username>/creator-economy-retention.git
+    cd creator-economy-retention
+    ```
 
-**1. The Impulse Window (Exponential Distribution)**
-*   60% of all repeat transactions occur within a 16-minute impulse window immediately following the initial transaction.
+2.  **Install dependencies:**
+    Ensure you have Python 3.8+ installed.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-**2. Wallet Retention Half-Life (Kaplan-Meier Survival Analysis)**
-*   [INSERT YOUR MEDIAN SURVIVAL TIME HERE] seconds is the exact median survival time before a viewer initiates a second transaction.
-*   ![Kaplan-Meier Curve](graph2.png)
+3.  **Run the application locally:**
+    ```bash
+    streamlit run app.py
+    ```
+
+4.  **Access the Dashboard:**
+    Open your browser and navigate to the URL provided in the terminal (typically `http://localhost:8501`).
+
+## Data Structure
+The application expects data to be located in a `data/` directory adjacent to `app.py`.
+*   `data/raw_transactions.json`: Contains the raw telemetry events (e.g., chat messages, tips, super chats).
+*   `data/user_financial_metrics.csv`: Contains the aggregated user-level financial data.)*
+
 
 ## Data Source
 The raw JSON extraction is hosted as a public CC0 dataset on Kaggle. 
