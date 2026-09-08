@@ -6,7 +6,7 @@ Built with Streamlit, Pandas, and Plotly, this project processes raw chat teleme
 *   **Zero-Database Architecture:** Reads directly from raw JSON exports and pre-computed CSV rollups, eliminating the need for local SQL databases or hardcoded credentials.
 *   **Financial Rollups:** Calculates key live-service metrics including Lifetime Value (LTV), Repeat-Purchase Rates, and Expansion Revenue from over 76,000 telemetry events.
 *   **Inter-arrival Time Analysis:** Utilizes Pandas to recreate SQL window functions, calculating the exact time delta between repeat purchases for individual users.
-*   **Survival Analysis:** Implements a streamlined Kaplan-Meier estimator (without relying on heavy external libraries like `lifelines`) to model user churn and project the probability of repeat microtransactions over time.
+*   **Survival Analysis:** Implements a streamlined Kaplan-Meier estimator to model user churn and project the probability of repeat microtransactions over time.
 *   **Interactive Visualizations:** Employs Plotly to generate clear, stakeholder-ready histograms, time-series line charts, and survival curves.
 
 ## Tech Stack
@@ -20,7 +20,7 @@ Built with Streamlit, Pandas, and Plotly, this project processes raw chat teleme
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/<your-username>/creator-economy-retention.git
+    git clone https://github.com/<anantiku-21>/creator-economy-retention.git
     cd creator-economy-retention
     ```
 
