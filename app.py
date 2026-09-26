@@ -1,12 +1,10 @@
 """
 Creator Economy Microtransaction & Retention Engine
-----------------------------------------------------
-A pure-Python Streamlit dashboard. No JavaScript / Node.js anywhere.
+A pure-Python Streamlit dashboard. 
 
 Reads directly from the raw data files exported by the YouTube live-chat
 scraper (raw_transactions.json) and the pre-computed financial rollup
-(user_financial_metrics.csv) -- no database connection required, so this
-runs anywhere Streamlit runs, including Streamlit Community Cloud.
+(user_financial_metrics.csv)
 
 Run locally with:   streamlit run app.py
 """
