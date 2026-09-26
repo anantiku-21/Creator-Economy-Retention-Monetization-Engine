@@ -307,6 +307,5 @@ with tab_explorer:
 
 st.divider()
 st.caption(
-    "Built with Streamlit, Pandas and Plotly only — no JavaScript, no Node.js, "
-    "no database connection required."
+
 )
